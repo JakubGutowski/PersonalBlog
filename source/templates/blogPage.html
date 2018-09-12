@@ -1,0 +1,54 @@
+{% extends "BlogMainTemplate.html" %}
+
+
+{% block rowAboutMe %}
+        <div class="w3-container " style="min-width: 300px;overflow: auto" >
+            <h4 class="w3-text-teal">About:</h4>
+          Main purpose of blog is to encourage myself to systematically mastering knowledge in area of:
+		<ul>
+		<li>Embedded Systems</li>
+		<li>DIY Electronics</li>
+		<li>Python / Django</li>
+		</ul>
+          <hr>
+        </div>
+      <br>
+
+{% endblock %}
+
+
+{% block rowContent %}
+     <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-asterisk fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Blog</h2>
+
+            {% for post in latest_posts %}
+                <div class="w3-container w3-text-grey">
+                    <a href="{% url 'post' post.id %}" style="text-decoration: none"> <h2 class="w3-text-grey w3-padding-16" style="display: inline">#{{ post.id }}: {{ post.title }}</h2></a>
+                    <p class="w3-text-teal w3-right-align" style="display: inline; float: right"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ post.pubDate |date:'d M y' }}</p>
+                    <div class="w3-container w3-text-grey w3-border-top">
+                        <p class="w3-text-gray">{{  post.text |linebreaks}}</p>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+     </div>
+
+
+{% endblock %}
+
+
+{% block footer %}
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p>Find me on social media.</p>
+        <a href="https://www.linkedin.com/in/jakub-gutowski"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i> -->
+
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+    </footer>
+{% endblock %}

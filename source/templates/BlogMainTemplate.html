@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<title>{{title}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu'>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+html,body,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif}
+h1 {font-family: 'Ubuntu Mono', monospace}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1000px;">
+
+  <!-- The Grid -->
+  <div class="w3-padding-24">
+  
+    <!-- Header -->
+    <div id="left" class="w3-row w3-padding-large w3-mobile" style="overflow: auto;"  >
+      <div class="w3-white w3-container  w3-text-grey w3-card-4">
+      {% block rowLogo %}
+
+        <div class="w3-display-container w3-center" style="width: 100%" >
+            <div class="w3-container w3-center w3-padding-16 " style="min-height: 50px;">
+               <svg 
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 60 20"
+   width="100%"
+    preserveAspectRatio="3:1"
+   >
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-20.585848,-48.451382)"
+     id="layer1">
+    <g
+       transform="translate(0.43299458,-0.38889093)"
+       id="g5432">
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot10"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(1.0007995,-0.02617695,-0.0174444,0.99965732,4.5640098,2.9692664)"><flowRegion
+           id="flowRegion12"><rect
+             id="rect14"
+             width="688.92401"
+             height="509.11688"
+             x="84.852814"
+             y="181.05751" /></flowRegion><flowPara
+           id="flowPara16"></flowPara></flowRoot>      <g
+         id="g5339"
+         transform="matrix(0.12588441,-0.00329264,-0.00219421,0.12574076,61.672551,51.468761)">
+        <circle
+           style="fill:none;fill-rule:evenodd;stroke:#009688;stroke-width:1.03350782;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1020-2"
+           cx="19.65476"
+           cy="36.586464"
+           r="10.818212" />
+        <path
+           style="fill:#009688;fill-opacity:1;fill-rule:evenodd;stroke-width:0.18600067"
+           d="m 19.654614,26.828014 c -5.389376,1.32e-4 -9.7582153,4.369202 -9.7580605,9.758579 1.33e-4,5.389174 4.3688885,9.757926 9.7580605,9.758058 5.389375,1.54e-4 9.758445,-4.368683 9.758578,-9.758058 1.56e-4,-5.389578 -4.369,-9.758732 -9.758578,-9.758579 z m 2.847497,3.566192 h 1.294369 l 0.01809,9.832988 h 2.128552 l 0.04134,2.580206 h -7.208345 v -2.580206 h 2.458248 v -5.371246 -0.913122 l -1.259355,0.75551 c -0.339321,0.239173 -0.982158,0.624449 -1.06355,0.420254 l -0.851579,-2.136429 c 1.402628,-0.519366 2.780511,-1.243327 3.750159,-2.412772 0.184379,-0.151164 0.43435,-0.169992 0.692073,-0.175183 z m -9.176826,0 h 2.546614 v 12.375472 h -2.546614 z"
+           id="path5302" />
+      </g>
+      <path
+         id="path5374"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 27.081729,60.402271 q 0.388362,-0.01018 0.760002,-0.07276 0.389596,-0.08068 0.692155,-0.229603 0.302564,-0.14891 0.483398,-0.400387 0.198487,-0.251941 0.204648,-0.604596 0.0086,-0.493722 -0.410134,-0.764763 -0.401098,-0.271507 -1.136363,-0.604769 -0.34999,-0.167096 -0.68232,-0.334653 -0.332326,-0.167553 -0.593122,-0.389855 -0.243147,-0.222764 -0.396474,-0.535999 -0.153037,-0.330868 -0.145038,-0.789322 0.02064,-1.181398 0.950877,-1.910723 0.930264,-0.729325 2.607304,-0.77319 0.82969,-0.02166 1.427433,0.103665 0.615395,0.124901 0.912723,0.275747 l -0.568788,1.248616 q -0.262027,-0.151769 -0.806803,-0.27852 -0.52713,-0.12721 -1.197937,-0.109664 -0.353068,0.0093 -0.707358,0.08901 -0.336324,0.06167 -0.603582,0.209659 -0.267259,0.147988 -0.430142,0.381372 -0.162868,0.233383 -0.16903,0.586039 -0.0074,0.423188 0.411064,0.711864 0.436398,0.270583 1.084636,0.535626 0.403247,0.148076 0.752918,0.332801 0.34968,0.184726 0.592207,0.442754 0.260488,0.239936 0.395862,0.571264 0.135375,0.331332 0.127385,0.789784 -0.01179,0.670052 -0.285412,1.188328 -0.27342,0.500647 -0.755892,0.848136 -0.482165,0.329858 -1.155753,0.506099 -0.656234,0.193414 -1.45062,0.214192 -1.006223,0.02634 -1.743645,-0.183517 -0.719775,-0.210294 -1.051792,-0.395483 l 0.604087,-1.249536 q 0.279054,0.186573 0.875259,0.400102 0.596205,0.213526 1.408245,0.192286 z" />
+      <path
+         id="path5376"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 34.553217,56.928635 q 1.059488,-0.04535 1.908056,-0.138027 0.84888,-0.110318 1.435127,-0.337157 0.603891,-0.227293 0.928107,-0.605894 0.324527,-0.396235 0.334681,-0.978119 0.0029,-0.141063 -0.06538,-0.29791 -0.05021,-0.15731 -0.20661,-0.294219 -0.13875,-0.137369 -0.402011,-0.218605 -0.263257,-0.08125 -0.651619,-0.07108 -0.600209,0.01566 -1.13411,0.276412 -0.515929,0.242616 -0.946677,0.659255 -0.430445,0.399002 -0.739464,0.918207 -0.291375,0.518738 -0.460099,1.087144 z m 1.704179,4.467374 q -0.864998,0.02258 -1.496194,-0.207612 -0.630895,-0.247869 -1.047179,-0.659977 -0.416295,-0.412106 -0.618588,-0.953184 -0.184342,-0.559172 -0.173876,-1.158689 0.01937,-1.110869 0.372326,-2.124715 0.370603,-1.014306 1.036691,-1.77197 0.666392,-0.775298 1.592029,-1.240126 0.943622,-0.482928 2.108711,-0.513402 0.688471,-0.018 1.179677,0.145393 0.49152,0.145767 0.804339,0.419583 0.313146,0.25618 0.4479,0.622777 0.152418,0.366133 0.145342,0.771689 -0.01937,1.110869 -0.595046,1.742792 -0.575664,0.631927 -1.481508,0.972866 -0.905535,0.323307 -2.019211,0.440559 -1.096024,0.116798 -2.155816,0.179762 -0.125382,1.113639 0.554233,1.606984 0.679859,0.475712 1.809646,0.446162 0.370707,-0.0096 0.760004,-0.07276 0.407248,-0.08116 0.743886,-0.160455 0.354598,-0.0974 0.620931,-0.19249 0.266637,-0.112722 0.373787,-0.186025 l 0.102037,1.231067 q -0.338487,0.185103 -1.100951,0.398918 -0.762771,0.231447 -1.96317,0.262846 z" />
+      <path
+         id="path5378"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 48.198511,60.643056 q -0.515014,0.18972 -1.08207,0.327926 -0.549383,0.137742 -1.167246,0.153902 -0.51194,0.01346 -0.951414,-0.08087 -0.421833,-0.09472 -0.753227,-0.315169 -0.313456,-0.23855 -0.500565,-0.639025 -0.169451,-0.400937 -0.158682,-1.018088 0.0066,-0.387921 0.06708,-0.812495 0.07799,-0.425034 0.191607,-0.868628 l 0.888463,-3.389573 -1.729995,0.04525 0.303682,-1.224054 1.747648,-0.04572 0.587238,-2.306583 1.52247,-0.286569 -0.662165,2.55529 3.14224,-0.08219 -0.303687,1.224054 -3.159889,0.08265 -0.890923,3.530634 q -0.09409,0.337333 -0.170258,0.656572 -0.07613,0.319238 -0.0814,0.618996 -0.01179,0.670051 0.284399,0.891425 0.314068,0.203284 0.878958,0.188509 0.547248,-0.01437 1.061025,-0.133502 0.531748,-0.13728 0.993804,-0.325614 z" />
+      <path
+         id="path5380"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 53.678816,59.036853 q 0.374718,-0.238921 0.853816,-0.392453 0.479092,-0.153529 1.008673,-0.16738 0.68847,-0.018 1.178754,0.198291 0.508242,0.198204 0.819231,0.577814 0.328947,0.361517 0.478594,0.886346 0.167294,0.524369 0.156525,1.14152 -0.01916,1.093237 -0.389984,2.125175 -0.353249,1.031477 -1.073213,1.843424 -0.719972,0.811948 -1.805109,1.316199 -1.067494,0.503791 -2.497379,0.541191 -0.476639,0.01256 -1.092334,-0.0948 -0.616004,-0.08963 -1.035068,-0.343049 l 2.992569,-11.728264 1.522455,-0.286568 z m 1.470245,0.684163 q -0.47664,0.01255 -0.956033,0.183629 -0.479396,0.171163 -0.890655,0.481539 l -1.381899,5.376459 q 0.351524,0.07892 0.775202,0.06784 0.900301,-0.0235 1.630225,-0.395136 0.747584,-0.372048 1.269673,-0.967322 0.522393,-0.612908 0.818074,-1.378509 0.295991,-0.783231 0.310445,-1.611975 0.0061,-0.352658 -0.05898,-0.668203 -0.06476,-0.333175 -0.254635,-0.574957 -0.172219,-0.242242 -0.487514,-0.374993 -0.297327,-0.150846 -0.773955,-0.138379 z" />
+      <path
+         id="path5382"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 63.437382,63.029185 c -0.06297,0.236643 -0.119762,0.461376 -0.170572,0.674202 -0.03903,0.212518 -0.06027,0.418697 -0.06378,0.618538 -0.0056,0.329143 0.07182,0.603237 0.232674,0.822277 0.17284,0.206977 0.500517,0.304154 0.983032,0.291534 0.200066,-0.0051 0.394453,-0.02208 0.583156,-0.0505 0.188919,-0.04019 0.366165,-0.08596 0.531754,-0.137283 l -0.109769,1.236608 c -0.08277,0.02567 -0.236389,0.06494 -0.460817,0.117803 -0.212456,0.04081 -0.518746,0.06645 -0.918884,0.07691 -0.435438,0.0114 -0.805127,-0.03769 -1.109062,-0.147241 -0.292165,-0.109856 -0.530653,-0.262243 -0.715461,-0.457155 -0.173046,-0.195221 -0.298395,-0.426939 -0.376058,-0.695157 -0.06591,-0.268523 -0.09607,-0.56148 -0.09053,-0.878871 0.0044,-0.246858 0.02613,-0.50006 0.06616,-0.759599 0.0516,-0.259845 0.109126,-0.525723 0.17271,-0.797633 l 0.850696,-3.247589 -2.3655,0.06187 0.303682,-1.224053 3.813039,-0.09974 z" />
+      <path
+         id="path5384"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:0.34999999;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         d="m 74.570296,66.121951 q -0.515014,0.18972 -1.082055,0.327924 -0.549399,0.137745 -1.167261,0.153906 -0.511929,0.01346 -0.951414,-0.08087 -0.421819,-0.09472 -0.753227,-0.315171 -0.313441,-0.238547 -0.50055,-0.639023 -0.169456,-0.40094 -0.158682,-1.018089 0.0066,-0.387922 0.06708,-0.812497 0.07799,-0.425034 0.191598,-0.868624 l 0.888466,-3.389576 -1.729996,0.04524 0.303676,-1.224053 1.747652,-0.04572 0.587243,-2.306581 1.522466,-0.286568 -0.66217,2.555287 3.142234,-0.08219 -0.303678,1.224053 -3.159882,0.08265 -0.890923,3.530638 q -0.09408,0.337334 -0.170258,0.656571 -0.07613,0.319239 -0.0814,0.618997 -0.01179,0.670047 0.284414,0.891424 0.314062,0.203285 0.878958,0.188508 0.547243,-0.01437 1.061024,-0.1335 0.531739,-0.137285 0.993799,-0.325615 z" />
+      <g
+         id="g76"
+         style="fill:#ff0000"
+         transform="matrix(2.0103414,-0.05258257,-0.03504108,2.0080474,-4.9861087,-78.83691)">
+        <g
+           aria-label="|"
+           transform="matrix(1.1553831,-0.03033409,-0.14967169,0.86944336,0,0)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.13614178px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.2534036"
+           id="text46" />
+        <g
+           aria-label="1"
+           transform="matrix(0.99525481,-0.02612999,-0.17375263,1.0093296,0,0)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.49353218px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26500255"
+           id="text54" />
+      </g>
+    </g>
+  </g>
+</svg>
+
+            </div>
+        <hr>    
+        </div>
+
+
+{% endblock %}
+
+      {% block rowAboutMe %}{% endblock %}
+      </div>
+    <!-- End Header -->
+    </div>
+
+    <!-- Main Content -->
+    <div id="right" class="w3-row w3-padding-large w3-mobile " >
+      {% block rowContent %}{% endblock %}
+
+
+    <!-- End Main Content -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+{% block footer %}
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p>Find me on social media.</p>
+        <a href="https://www.linkedin.com/in/jakub-gutowski"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i> -->
+
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+    </footer>
+{% endblock %}
+
+</body>
+</html>
+
