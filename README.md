@@ -1,2 +1,2 @@
 # PersonalBlog
-Blog omndjango
+Blog on django
