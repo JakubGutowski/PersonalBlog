@@ -1,5 +1,11 @@
 from django.db import models
 from datetime import datetime
+
+
+class VisitorIp(models.Model):
+    pub_date = models.DateTimeField('date published', default=datetime.now())
+    ip_address = models.GenericIPAddressField()
+
 class BlogPost(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField()
