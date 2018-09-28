@@ -31,3 +31,4 @@ class MainPageTestCase(TestCase):
         self.assertEqual(len(VisitorIp.objects.all()), 1)
         self.response = self.client.get('/')
         self.assertEqual(len(VisitorIp.objects.all()), 2)
+
