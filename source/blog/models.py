@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class VisitorIp(models.Model):
-    pub_date = models.DateTimeField('date published', default=datetime.now())
+    pub_date = models.DateTimeField('GET reqest date ', default=datetime.now())
     ip_address = models.GenericIPAddressField()
 
 class BlogPost(models.Model):

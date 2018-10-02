@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
+from datetime import datetime
 
 from .models import BlogPost, PostComments, VisitorIp
 
@@ -14,6 +15,7 @@ def collectVisitorIP(request):
         ipaddress = request.META.get('REMOTE_ADDR')
     get_ip = VisitorIp()  # imported class from model
     get_ip.ip_address = ipaddress
+    get_ip.pub_date = datetime.now()
     get_ip.save()
 
 
