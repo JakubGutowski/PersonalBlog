@@ -1,0 +1,61 @@
+{% extends "BlogMainTemplate.html" %}
+
+
+
+{% block rowContent %} {# post block #}
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+
+            <div class="w3-container w3-text-grey">
+                <h2 class="w3-text-grey w3-padding-16" style="display: inline">#{{ blogpost.id }}: {{ blogpost.title }}</h2>
+                    <p class="w3-text-teal w3-right-align" style="display: inline; float: right">
+                        <i class="fa fa-calendar fax-fw w3-margin-right"></i>
+                        {{ blogpost.pubDate |date:'d M y' }}</p>
+                <div class="w3-container w3-text-grey w3-border-top">
+                    <p class="w3-text-gray">{{  blogpost.text |linebreaks}}</p>
+                </div>
+            </div>
+
+    </div>
+    {% endblock %}
+    {% comment %}
+    {# comments blocks #}
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <div class="w3-container w3-text-grey">
+            <h2 class="w3-text-grey w3-padding-16" style="display: inline">
+                <i class="w3-text-teal fa fa-comments fa-fw w3-margin-right" style="display: inline"></i>
+                Comments </h2>
+            <div class="w3-container w3-text-grey w3-border-top">
+            {% for comment in comments%}
+                <div class="w3-container w3-text-grey">
+                <h5 class="w3-text-grey w3-padding-16" style="display: inline">{{comment.nick }}:</h5>
+                    <p class="w3-text-teal w3-right-align w3-tiny" style="display: inline; float: right"><i class="fa fa-calendar w3-tiny fax-fw w3-margin-right"></i>{{ comment.pubDate |date:'d M y' }}</p>
+                <div class="w3-container w3-text-grey w3-border w3-margin">
+                    <p class="w3-text-gray">{{ comment.comment }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+        </div>
+
+     {# add comment form #}
+    {% csrf_token %}
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+
+
+        <div class="w3-container w3-text-gray">
+        <h4>Add Comment</h4>
+        </div>
+
+        <form class="w3-container w3-border-top">
+            <label class="w3-text-grey w3-padding-16" style="display: inline"> Nick: </label>
+            <input style="max-width: 150px" class="w3-input w3-border"  type="text" name="nick">
+            <label class="w3-text-grey w3-padding-16" style="display: inline"> Comment:</label>
+            <textarea class="w3-input w3-border w3-margin-bottom"  name="comment" rows=4 style="width: 100%">Put your comment here</textarea>
+        </form>
+
+    </div>
+
+{% endcomment %}
+
+
