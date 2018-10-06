@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import re_path, path
-from blog.views import BlogPage , PostDetail
+from blog.views import BlogPage, PostDetail, MonthStats
 
 
 urlpatterns = [
     re_path(r'^$' , BlogPage.as_view(), name='blog'),
     re_path(r'^admin/', admin.site.urls, name='admin',),
     path('post/<int:blogpost_id>', PostDetail.as_view(), name='post'),
+    path('stats/<str:year>/<str:month>', MonthStats.as_view(), name='stats')
 ]

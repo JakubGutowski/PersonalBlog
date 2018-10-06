@@ -29,7 +29,7 @@ h1 {font-family: 'Ubuntu Mono', monospace}
 
         <div class="w3-display-container w3-center" style="width: 100%" >
             <div class="w3-container w3-center w3-padding-16 " style="min-height: 50px;">
-               <svg 
+                <svg
    viewBox="0 0 60 20"
    width="100%"
     preserveAspectRatio="3:1"
@@ -121,10 +121,31 @@ h1 {font-family: 'Ubuntu Mono', monospace}
       </div>
     <!-- End Header -->
     </div>
+      <!-- Navigator -->
+      <div id="navi" class="w3-row w3-padding-large w3-mobile ">
+          <div class="w3-bar w3-white w3-text-grey w3-card-4 w3-leftbar w3-border-teal">
 
+              <a href="" class="w3-bar-item w3-button">Home</a>
+              <div class="w3-dropdown-hover">
+                  <button class="w3-button">Archive</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                  </div>
+              </div>
+              <div class="w3-dropdown-hover">
+                  <button class="w3-button">Statistics</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a href="/stats/2018/10" class="w3-bar-item w3-button">October 2018</a>
+                  </div>
+              </div>
+          </div>
+      </div>
     <!-- Main Content -->
     <div id="right" class="w3-row w3-padding-large w3-mobile " >
-      {% block rowContent %}{% endblock %}
+
+        {% block rowContent %}{% endblock %}
 
 
     <!-- End Main Content -->

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from datetime import datetime
+from calendar import month_name
 
 from .models import BlogPost, PostComments, VisitorIp
 
@@ -20,10 +21,9 @@ def collectVisitorIP(request):
 
 
 class BlogPage(View):
-
     @staticmethod
     def get(request):
-        post = BlogPost.objects.order_by('-pubDate')[:5]
+        post = BlogPost.objects.order_by('-pubDate')
         collectVisitorIP(request)
 
         context = {
@@ -46,6 +46,14 @@ class PostDetail(View):
         return HttpResponse(render(request, 'postPage.html', context))
 
 
-
-
-
+class MonthStats(View):
+    @staticmethod
+    def get(request, year, month):
+        barChart = "visitsChart" + str(month) + str(year)
+        title = "Number of visits in " + month_name[int(month)] + " " + str(year)
+        context = {
+            'barChart': barChart,
+            'title': title,
+            'date': month_name[int(month)] + " " + str(year),
+        }
+        return HttpResponse(render(request, 'monthStats.html', context))
