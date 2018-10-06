@@ -125,19 +125,19 @@ h1 {font-family: 'Ubuntu Mono', monospace}
       <div id="navi" class="w3-row w3-padding-large w3-mobile ">
           <div class="w3-bar w3-white w3-text-grey w3-card-4 w3-leftbar w3-border-teal">
 
-              <a href="" class="w3-bar-item w3-button">Home</a>
-              <div class="w3-dropdown-hover">
-                  <button class="w3-button">Archive</button>
+              <a href={% url "blog" %} class="w3-bar-item w3-button">Home</a>
+              <!--<div class="w3-dropdown-hover">
+                   <button class="w3-button">Archive</button>
                   <div class="w3-dropdown-content w3-bar-block w3-card-4">
                       <a href="#" class="w3-bar-item w3-button">Link 1</a>
                       <a href="#" class="w3-bar-item w3-button">Link 2</a>
                       <a href="#" class="w3-bar-item w3-button">Link 3</a>
                   </div>
-              </div>
+              </div>-->
               <div class="w3-dropdown-hover">
                   <button class="w3-button">Statistics</button>
                   <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                      <a href="/stats/2018/10" class="w3-bar-item w3-button">October 2018</a>
+                      <a href={% url 'stats' '2018' '10' %} class="w3-bar-item w3-button">October 2018</a>
                   </div>
               </div>
           </div>
