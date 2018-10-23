@@ -17,7 +17,7 @@
 
     </div>
     {% endblock %}
-    {% comment %}
+{% block comment %}
     {# comments blocks #}
     <div class="w3-container w3-card w3-white w3-margin-bottom">
         <div class="w3-container w3-text-grey">
@@ -38,24 +38,28 @@
         </div>
         </div>
 
-     {# add comment form #}
-    {% csrf_token %}
+
+
     <div class="w3-container w3-card w3-white w3-margin-bottom">
 
 
         <div class="w3-container w3-text-gray">
         <h4>Add Comment</h4>
-        </div>
-
-        <form class="w3-container w3-border-top">
+            <hr>
+            <form class="w3-container w3-border-top" action="/post/{{ blogpost.id }}" method="post">
+                {% csrf_token %}
             <label class="w3-text-grey w3-padding-16" style="display: inline"> Nick: </label>
             <input style="max-width: 150px" class="w3-input w3-border"  type="text" name="nick">
             <label class="w3-text-grey w3-padding-16" style="display: inline"> Comment:</label>
             <textarea class="w3-input w3-border w3-margin-bottom"  name="comment" rows=4 style="width: 100%">Put your comment here</textarea>
+                <button class="w3-btn w3-teal">Submit</button>
+                </p>
         </form>
+            <hr>
+        </div>
 
     </div>
 
-{% endcomment %}
+{% endblock %}
 
 

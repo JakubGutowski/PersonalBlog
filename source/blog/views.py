@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from django.views import View
+from .forms import PostComent as PostComentForm
 from django.http import HttpResponse
 from datetime import datetime
 from calendar import month_name
@@ -38,12 +40,27 @@ class PostDetail(View):
         post = BlogPost.objects.get(id=blogpost_id)
         comments = PostComments.objects.filter(post=blogpost_id)
         collectVisitorIP(request)
-
+        form = PostComentForm(request.POST)
         context = {
             'blogpost': post,
             'comments': comments,
+            'form': form,
             }
         return HttpResponse(render(request, 'postPage.html', context))
+
+    @staticmethod
+    def post(request, blogpost_id):
+        form = PostComentForm(request.POST)
+        if form.is_valid():
+            nick = form.cleaned_data['nick']
+            comment = form.cleaned_data['comment']
+            postComent = PostComments()
+            postComent.nick = nick
+            postComent.comment = comment
+            postComent.pubDate = datetime.now()
+            postComent.post = BlogPost.objects.get(id=blogpost_id)
+            postComent.save()
+            return HttpResponseRedirect('/post/' + str(blogpost_id))
 
 
 class MonthStats(View):
