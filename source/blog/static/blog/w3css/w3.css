@@ -1716,3 +1716,17 @@ a {
 .w3-border-pale-blue, .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
 }
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../Ubuntu/Ubuntu-Regular.ttf),
+    url(../Ubuntu/Ubuntu-Bolditalic.ttf),
+    url(../Ubuntu/Ubuntu-Bold.ttf),
+    url(../Ubuntu/Ubuntu-Italic.ttf);
+}
+
+@font-face {
+    font-family: UbuntuMono;
+    src: url(../UbuntuMono/Ubuntu-Regular.ttf);
+    font-weight: bold, italic;
+}
