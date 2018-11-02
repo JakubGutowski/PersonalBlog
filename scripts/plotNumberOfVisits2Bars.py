@@ -11,10 +11,9 @@ class VisitModel():
         self.ip_address = model[1]
 
 # Read date and number of days in this month
-todayDate = datetime.now()
+todayDate = datetime(2018, 10, 31, 23, 55, 1, 1)  # datetime.now()
 thisMonth = todayDate.month
 daysInThisMonth = monthrange(todayDate.year, todayDate.month)[1]
-
 # Connect to DB and select records
 dbTargetPath = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'database', 'db.sqlite3'))
 conn = sqlite3.connect(dbTargetPath, detect_types=sqlite3.PARSE_DECLTYPES)
@@ -30,7 +29,7 @@ visitsThisMonth = list(filter(lambda x: x.pub_date.month == thisMonth, visitsLis
 visitsInDay = []
 countVisitsInDay = []
 countUniqueVisitsInDay = []
-for day in range(1, daysInThisMonth):
+for day in range(1, daysInThisMonth + 1):
     ipVisitsInDay = []
     visitsInDay.append(list(filter(lambda x: x.pub_date.day == day, visitsThisMonth)))
     countVisitsInDay.append(len(visitsInDay[day-1]))
@@ -39,9 +38,11 @@ for day in range(1, daysInThisMonth):
 barChartFilePath = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'source', 'blog','static','visitStatistics','visitsChart' + datetime.strftime(todayDate, '%m%Y')))
 
 # Create create barchart of number of visits each day
-plt.bar(range(1, daysInThisMonth), countVisitsInDay, 0.9, color='#D3D3D3')
-plt.bar(range(1, daysInThisMonth), countUniqueVisitsInDay, 0.9, color='teal')
-plt.yticks(range(1, max(countVisitsInDay) + 2,5))
+plt.bar(range(1, daysInThisMonth + 1), countVisitsInDay, 0.9, color='#D3D3D3')
+plt.bar(range(1, daysInThisMonth + 1), countUniqueVisitsInDay, 0.9, color='teal')
+plt.yticks(range(0, max(countVisitsInDay) + 2, 5))
+plt.xticks(range(1, daysInThisMonth + 1))
 plt.legend(['Number of visits', 'Number of unique visits'])
 plt.title('Site visits in month:' + datetime.strftime(todayDate, '%B %Y'))
 plt.savefig(barChartFilePath, transparent=True)
+plt.show()
